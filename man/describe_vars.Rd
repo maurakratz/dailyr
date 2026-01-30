@@ -2,7 +2,7 @@
 % Please edit documentation in R/var_overview.R
 \name{describe_vars}
 \alias{describe_vars}
-\title{Overview of Variable Names, Labels and Classes in a Dataset}
+\title{Overview of all Variables in a Dataset}
 \usage{
 describe_vars(data)
 }
@@ -10,9 +10,9 @@ describe_vars(data)
 \item{data}{A data frame or tibble.}
 }
 \value{
-A tibble with columns: variable, class, label.
+Invisibly returns the tibble.
 }
 \description{
-Returns a clean table of variable names, classes, and labels.
-Replaces NULL labels with NA.
+Returns a clean table of variable names, classes, labels, and example values.
+Prints 100 rows by default.
 }

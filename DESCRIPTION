@@ -11,3 +11,5 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
 Imports: 
     tibble
+URL: https://github.com/maurakratz/dailyr
+BugReports: https://github.com/maurakratz/dailyr/issues
