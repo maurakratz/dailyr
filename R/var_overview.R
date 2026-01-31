@@ -6,7 +6,7 @@
 #' @param data A data frame or tibble.
 #' @return Invisibly returns the tibble.
 #' @export
-describe_vars <- function(data) {
+var_overview <- function(data) {
   # Helper function to generate the example string based on type
   get_example <- function(x) {
     if (all(is.na(x))) return("All NA")
