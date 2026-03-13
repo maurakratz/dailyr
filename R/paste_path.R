@@ -4,6 +4,6 @@
 #' @return Character string.
 #' @export
 paste_path <- function() {
-  path <- readClipboard()
-  convert_path(path) # Re-use the logic from convert_path
+  path <- readClipboard()[1] # Take only first element
+  convert_path(path)
 }

@@ -5,15 +5,13 @@
 #' @return The converted path with forward slashes.
 #' @export
 convert_path <- function(path) {
-  path <- trimws(path) # Remove leading/trailing whitespace
+  path <- trimws(path[1]) # Take only first element
+  path <- gsub('^"|"$', "", path) # Remove surrounding quotes
   path <- gsub("\\\\", "/", path) # Fix slashes
-
   folder_path <- dirname(path)
-
   if (!dir.exists(folder_path)) {
     dir.create(folder_path, recursive = TRUE)
     message(paste("Created missing directory:", folder_path))
   }
-
   return(path)
 }
